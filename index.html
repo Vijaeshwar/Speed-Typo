@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Typing Speed Challenge</title>
+</head>
+<body>
+    <button id="config-btn" class="config-button">
+        <i class="fas fa-cogs"></i>
+    </button>
+    <div id="config-panel" class="config-panel hidden">
+        <form id="config-form">
+            <label for="level">Level</label>
+            <select id="level">
+                <option value="simple">Beginner</option>
+                <option value="moderate">Intermediate</option>
+                <option value="complex">Pro</option>
+            </select>
+        </form>
+    </div>
+    <div class="game-container">
+        <h2>⚡Speed typo⚡</h2>
+        <p>Type :</p>
+        <h1 id="current-word"></h1>
+        <input type="text" id="input-box" autocomplete="off" placeholder="Start typing...">
+        <div class="status-bar">
+            <span class="timer">Time: <span id="time-remaining">15</span>s</span>
+            <span class="score">Score: <span id="current-score">0</span></span>
+        </div>
+        <div id="game-over" class="game-over hidden">
+            <h1>Time's Up!</h1>
+            <p> Final score  <span id="final-score">0</span></p>
+            <button onclick="restartGame()" style="font-style: oblique;">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

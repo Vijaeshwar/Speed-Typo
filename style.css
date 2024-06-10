@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
+:root {
+    --primary-bg: #FFDADA;
+    --secondary-bg: #FFDADA;
+    --accent-bg: rgb(255, 160, 160);
+    --font-color: #333;
+    --button-bg: #FF4C4C;
+    --border-radius: 8px;
+}
+
+body {
+    background-color: var(--primary-bg);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDam7w6KSv7HaJkzwBoAt6ug7osNoNsdvKsA&s");
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.config-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.config-panel {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.config-panel.show {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.game-container {
+    
+    padding: 40px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 400px;
+    position: relative;
+}
+
+.game-container h2 {
+    margin-bottom: 20px;
+    color: var(--font-color);
+}
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: var(--font-color);
+}
+
+#input-box {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid var(--accent-bg);
+    border-radius: var(--border-radius);
+}
+
+.game-over {
+    position: absolute;
+    top: 0;
+   
+    left: -100px;
+    width: 700px;
+    height:400px;
+    
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    visibility: hidden;
+}
+
+.game-over.show {
+    visibility: visible;
+}
